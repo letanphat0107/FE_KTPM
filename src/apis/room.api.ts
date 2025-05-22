@@ -25,6 +25,7 @@ const externalHttp = axios.create({
 });
 export const AI_TRAIN_MODE = "api/v1/recommend/train"
 export const AI_SIMILAR_ROOM = "api/v1/recommend/similar"
+export const AI_GET_FOR_USER = "api/v1/recommend/user/12" // user/{userId}
 
 const roomApi = {
   getRooms(
@@ -136,7 +137,9 @@ const roomApi = {
   getRoomOFUser() {
     return http.get<GetRoomsResponse>(`${URL_GET_ROOMS}/by-user`);
   },
-
+  aiGetRoomForUser(userId: number) {
+    return externalHttp.get<SuccessResponse<any>>(`${AI_GET_FOR_USER}/${userId}`);
+  }
 };
 
 export default roomApi;

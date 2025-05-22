@@ -791,7 +791,7 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
-
+      
       <HotListings roomType="APARTMENT" title="LỰA CHỌN CHỖ Ở HOT" />
       <RoomList />
       <HotListings roomType="WHOLE_HOUSE" title="NHÀ NGUYÊN CĂN CHO THUÊ" />
