@@ -80,10 +80,6 @@ export default function DetailRoom() {
             `${address.houseNumber}, ${address.street}, ${address.ward}, ${address.district}, ${address.province}`
           );
 
-          const ifRenderMap = await addressAPI.getMapForward(`${address}`)
-          setLongitude(ifRenderMap.data.data.longitude);
-          setLatitude(ifRenderMap.data.data.latitude);
-
         }
       } catch (error) {
         console.error("Error fetching room details:", error);
@@ -606,8 +602,8 @@ export default function DetailRoom() {
                 }}
               >
                   <RoomMap
-                    latitude={latitude}
-                    longitude={longitude}
+                    latitude={10.8305312}
+      longitude={106.6846849}
                     roomTitle="Phòng trọ ở khu vực này"
                     roomAddress = {address}
                   />

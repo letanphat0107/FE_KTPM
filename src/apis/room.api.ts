@@ -134,7 +134,7 @@ const roomApi = {
     return externalHttp.get<SuccessResponse<any>>(`${AI_TRAIN_MODE}`);
   },
   getRoomOFUser(id: number) {
-    return http.get<GetRoomsResponse>(`${URL_GET_ROOMS}/${id}`);
+    return http.get<GetRoomsResponse>(`${URL_GET_ROOMS}/by-user`);
   },
 
 };
