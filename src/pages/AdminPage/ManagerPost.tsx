@@ -53,7 +53,7 @@ export default function ManagerPost() {
         `Fetching rooms for user ${profile.id}, attempt ${attempt}/${maxRetries}`
       );
 
-      const response = await roomApi.getRooms({ roomType: "BOARDING_HOUSE" });
+      const response = await roomApi.getRoomOFUser();
       console.log("API response:", response.data);
 
       const roomsData = response.data.data.content as Room[];
